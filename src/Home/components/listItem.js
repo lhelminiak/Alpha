@@ -18,6 +18,7 @@ export default class ListItem extends React.Component {
         return (
             <View style={styles.listItem}>
                 <View style={styles.itemIndicatorContainer}>
+                    <Text>{this.props.title}</Text>
 
                 </View>
 
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
     itemIndicatorContainer: {
         flex: 1,
         alignSelf: 'auto',
-        backgroundColor: 'black',
+        backgroundColor: 'white',
 
     },
 

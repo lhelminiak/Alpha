@@ -37,8 +37,7 @@ export default class TradeList extends React.Component {
                         <View style={styles.separator}>{separator}
                         </View>}
                     renderItem={({item}) =>
-                        <Text style={styles.item}>{item}
-                        </Text>}
+                        <ListItem title={item}/>}
                     renderSectionHeader={({section}) =>
                         <Text style={styles.sectionHeader}>{section.title}
                         </Text>}
@@ -120,9 +119,9 @@ const styles = StyleSheet.create({
     },
 
 
-    item: {
-        padding: 10,
-        fontSize: 18,
-        height: 44,
-    },
+    // item: {
+    //     padding: 10,
+    //     fontSize: 18,
+    //     height: 44,
+    // },
 });

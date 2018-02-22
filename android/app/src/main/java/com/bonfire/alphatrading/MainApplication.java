@@ -1,4 +1,4 @@
-package com.invertase.rnfirebasestarter;
+package com.bonfire.alphatrading;
 
 import android.app.Application;
 

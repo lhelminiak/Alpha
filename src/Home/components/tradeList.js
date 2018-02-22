@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { SectionList, StyleSheet, Text, View } from 'react-native';
+import ListItem from './listItem';
 
 
 

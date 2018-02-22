@@ -1,11 +1,8 @@
-
 import React from 'react';
-import { SectionList, StyleSheet, Text, View } from 'react-native';
-
-
+import {StyleSheet, Text, View, Button } from 'react-native';
 
 import firebase from 'react-native-firebase';
-export default class TradeList extends React.Component {
+export default class ListItem extends React.Component {
 
     constructor() {
         super();
@@ -19,7 +16,19 @@ export default class TradeList extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <View style={styles.listItem}>
+                <View style={styles.itemIndicatorContainer}>
+
+                </View>
+
+                <View style={styles.itemInfoContainer}>
+
+                </View>
+
+                <View style={styles.itemButtonContainer}>
+
+                </View>
+
 
 
 
@@ -31,9 +40,38 @@ export default class TradeList extends React.Component {
 
 const styles = StyleSheet.create({
 
-    container: {
-        
+    listItem: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'nowrap',
+        justifyContent: 'flex-start',
+        alignItems: 'stretch',
+        alignContent: 'flex-start'
+    },
+
+    itemIndicatorContainer: {
+        flex: 1,
+        alignSelf: 'auto',
+        backgroundColor: 'black',
+
+    },
+
+    itemInfoContainer: {
+        flex: 1,
+        alignSelf: 'auto',
+        backgroundColor: 'red',
+    },
+
+    itemButtonContainer: {
+        flex: 1,
+        alignSelf: 'auto',
+        backgroundColor: 'green'
     }
+
+
+
+
+
 
 
 });

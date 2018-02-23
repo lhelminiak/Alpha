@@ -1,8 +1,11 @@
 import React from 'react';
 import {StyleSheet, Text, View, Button } from 'react-native';
+import Icon from 'react-native-vector-icons/Entypo';
 
 import firebase from 'react-native-firebase';
 export default class ListItem extends React.Component {
+
+
 
     constructor() {
         super();
@@ -15,12 +18,14 @@ export default class ListItem extends React.Component {
     }
 
     render() {
+
+        const upArrow = (<Icon style={styles.indicatorIcon} name="arrow-long-up" size={30} color="white"/>);
         return (
             <View style={styles.listItem}>
 
                 <View style={styles.itemIndicatorContainer}>
                     <View style={[styles.indicator, styles.profitTradeIndicator]}>
-
+                        {upArrow}
                     </View>
 
                 </View>
@@ -94,22 +99,37 @@ const styles = StyleSheet.create({
     indicator: {
         height: '100%',
         width: '60%',
+        borderStyle: 'solid',
+        borderWidth: 1,
         borderRadius: 50,
         paddingTop: '2%',
         paddingBottom: '2%',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
 
     },
     openTradeIndicator: {
         backgroundColor: '#cccccc',
+        borderColor: '#cccccc'
     },
     profitTradeIndicator: {
         backgroundColor: '#21CE99',
+        borderColor: '#21CE99'
     },
     lossTradeIndicator: {
         backgroundColor: '#F2522E',
+        borderColor: '#F2522E'
     },
     evenTradeIndicator: {
         backgroundColor: '#cccccc',
+        borderColor: '#cccccc'
+    },
+
+    indicatorIcon:{
+        alignSelf: 'center',
+
     },
 
 
@@ -200,6 +220,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#f5f5f5',
 
     },
+
+
 
 
 

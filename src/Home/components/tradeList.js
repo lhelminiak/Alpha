@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
 
     // item: {
     //     padding: 10,
-    //     fontSize: 18,
+    //     fontSize: 18,g
     //     height: 44,
     // },
 });

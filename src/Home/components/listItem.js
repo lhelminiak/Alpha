@@ -10,22 +10,44 @@ export default class ListItem extends React.Component {
     constructor() {
         super();
         this.state = {
-
+            active: false,
+            profit: true,
+            ticker: '',
+            tradeDate: '',
+            tradeNote: '',
+            tradePosition: '',
         };
     }
 
     componentDidMount() {
+
+    }
+
+    componentWillMount() {
+
+
     }
 
     render() {
 
-        const upArrow = (<Icon style={styles.indicatorIcon} name="arrow-long-up" size={30} color="white"/>);
+        const upArrow = (<Icon style={styles.indicatorIcon} name="arrow-up" size={30} color="white"/>);
+        const downArrow = (<Icon style={styles.indicatorIcon} name="arrow-down" size={30} color="white" />);
+        const openOrderIcon = (<Icon style={styles.indicatorIcon} name="minus" size={40} color="white" />);
+        // const evenIcon = (<View style={styles.evenIconContainer}>
+        //                     <Icon style={styles.evenIconChild} name="minus" size={40} color="white"/>
+        //                     <Icon style={styles.evenIconChild} name="minus" size={40} color="white"/>
+        //                     </View>);
+        const rightArrow = (<Icon style={styles.rightArrow} name="chevron-small-right" size={20}/>);
+
+
+
+
         return (
             <View style={styles.listItem}>
 
                 <View style={styles.itemIndicatorContainer}>
-                    <View style={[styles.indicator, styles.profitTradeIndicator]}>
-                        {upArrow}
+                    <View style={[styles.indicator, styles.openTradeIndicator]}>
+                        {openOrderIcon}
                     </View>
 
                 </View>
@@ -37,24 +59,19 @@ export default class ListItem extends React.Component {
                         <Text style={styles.tickerSymbol}>AAPL</Text>
                         <Text style={styles.tradeDate}> Today 12:00 PM</Text>
                     </View>
-
                     <View style={styles.itemInfoBottom}>
                         <View style={styles.tradeNotePreviewContainer}>
                             <Text style={styles.tradeNotePreview} numberOfLines={1} ellipsizeMode="tail">Waiting for trend to reverse before exiting</Text>
                         </View>
-
                         <View style={styles.tradePositionContainer}>
                             <Text style={styles.tradePosition}>Long</Text>
                         </View>
-
-
                     </View>
-
                 </View>
 
 
                 <View style={styles.itemButtonContainer}>
-
+                    {rightArrow}
                 </View>
 
             </View>
@@ -219,7 +236,35 @@ const styles = StyleSheet.create({
         alignSelf: 'auto',
         backgroundColor: '#f5f5f5',
 
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'nowrap',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+
     },
+
+    rightArrow: {
+        color: '#03A9F4'
+
+    },
+    //
+    // evenIconContainer:{
+    //
+    //     display: 'flex',
+    //     flexDirection: 'column',
+    //     flexWrap: 'wrap',
+    //     justifyContent: 'center',
+    //     alignItems: 'center'
+    //
+    // },
+    //
+    // evenIconChild:{
+    //     alignSelf: 'auto',
+    //
+    // }
+
 
 
 

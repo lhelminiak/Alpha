@@ -26,7 +26,7 @@ export default class TradeList extends React.Component {
                     sections={[
                         {title: 'Open Trades', data: ['Hey Look']},
                         {title: 'Closed Trades', data: ['Alyssa', 'Brooke', 'Rachel', 'Margaret', 'Mia?', 'Some girl named Carley somewhere', 'Gabby Pinto',
-                                'Morgan cant forget her too', 'Drake cuz your gay', 'Never Marta tho thats weird',
+                                'Morgan cant forget her too', 'Never Marta tho thats weird',
                                 'Alexa Ostrega', 'Sorry I typed all this love you' ]},
                     ]}
 

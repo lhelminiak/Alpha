@@ -11,11 +11,12 @@ export default class ListItem extends React.Component {
         super();
         this.state = {
             active: false,
-            tradeResult: true,
             ticker: '',
             tradeDate: '',
             tradeNote: '',
             tradePosition: '',
+            // tradeResult: null,
+
         };
     }
 
@@ -49,18 +50,22 @@ export default class ListItem extends React.Component {
 
 
                 <View style={styles.itemInfoContainer}>
+
                     <View style={styles.itemInfoTop}>
-                        <Text style={styles.tickerSymbol}>AAPL</Text>
-                        <Text style={styles.tradeDate}> Today 12:00 PM</Text>
+                        <Text style={styles.tickerSymbol}>{this.props.tickerSymbol}</Text>
+                        <Text style={styles.tradeDate}>{this.props.tradeDate}</Text>
                     </View>
+
                     <View style={styles.itemInfoBottom}>
                         <View style={styles.tradeNotePreviewContainer}>
-                            <Text style={styles.tradeNotePreview} numberOfLines={1} ellipsizeMode="tail">Waiting for trend to reverse before exiting</Text>
+                            <Text style={styles.tradeNotePreview} numberOfLines={1} ellipsizeMode="tail">{this.props.tradeNote}</Text>
                         </View>
+
                         <View style={styles.tradePositionContainer}>
-                            <Text style={styles.tradePosition}>Long</Text>
+                            <Text style={styles.tradePosition}>{this.props.tradePosition}</Text>
                         </View>
                     </View>
+
                 </View>
 
 
@@ -202,11 +207,14 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        alignContent: 'flex-start',
+
 
     },
 
     tradeNotePreview:{
         color: '#9b9b9b',
+
     },
 
     tradePositionContainer:{

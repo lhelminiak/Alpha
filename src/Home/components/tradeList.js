@@ -23,11 +23,28 @@ export default class TradeList extends React.Component {
             <View style={styles.container}>
 
                 <SectionList
+                    // sections={[
+                    //     {title: 'Open Trades', data: ['Hey Look']},
+                    //     {title: 'Closed Trades', data: ['Alyssa', 'Brooke', 'Rachel', 'Margaret', 'Mia?', 'Some girl named Carley somewhere', 'Gabby Pinto',
+                    //             'Morgan cant forget her too', 'Never Marta tho thats weird',
+                    //             'Alexa Ostrega', 'Sorry I typed all this love you' ]},
+                    // ]}
+
                     sections={[
-                        {title: 'Open Trades', data: ['Hey Look']},
-                        {title: 'Closed Trades', data: ['Alyssa', 'Brooke', 'Rachel', 'Margaret', 'Mia?', 'Some girl named Carley somewhere', 'Gabby Pinto',
-                                'Morgan cant forget her too', 'Never Marta tho thats weird',
-                                'Alexa Ostrega', 'Sorry I typed all this love you' ]},
+                        {title: 'Open Trades', data: [
+                                {id: 1, tickerSymbol: 'AAPL', tradeDate: 'Today 12:00 PM', tradeNote: 'Waiting for Trend to Reverse filll up this mothafuckin textarea', tradePosition: 'Long'},
+                                {id: 2, tickerSymbol: 'TSLA', tradeDate: 'Yesterday 11:00 AM', tradeNote: 'Waiting for something to happen', tradePosition: 'Short'},
+                                {id: 3, tickerSymbol: 'AMZN', tradeDate: 'Tuesday 1:00 PM', tradeNote: 'Waiting for Trend to Reverse', tradePosition: 'Long'},
+                            ]},
+                        {title: 'Closed Trades', data: [
+                                {id: 1, tickerSymbol: 'USD/CAD', tradeDate: 'Today 2:00 PM', tradeNote: 'Fuck the canadian dollar', tradePosition: 'Long'},
+                                {id: 2, tickerSymbol: 'TSLA', tradeDate: 'Yesterday 3:00 PM', tradeNote: 'Swing Trade', tradePosition: 'Short'},
+                                {id: 3, tickerSymbol: 'NVDA', tradeDate: 'Tuesday 1:00 PM', tradeNote: 'Crypto is making me money', tradePosition: 'Long'},
+
+                            ]}
+
+
+
                     ]}
 
                     refreshing={true}
@@ -37,7 +54,12 @@ export default class TradeList extends React.Component {
                         <View style={styles.separator}>{separator}
                         </View>}
                     renderItem={({item}) =>
-                        <ListItem title={item}/>}
+                        <ListItem
+                            tickerSymbol={item.tickerSymbol}
+                            tradeDate={item.tradeDate}
+                            tradeNote={item.tradeNote}
+                            tradePosition={item.tradePosition}/>}
+
                     renderSectionHeader={({section}) =>
                         <Text style={styles.sectionHeader}>{section.title}
                         </Text>}

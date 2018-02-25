@@ -11,7 +11,7 @@ export default class ListItem extends React.Component {
         super();
         this.state = {
             active: false,
-            profit: true,
+            tradeResult: true,
             ticker: '',
             tradeDate: '',
             tradeNote: '',
@@ -33,21 +33,15 @@ export default class ListItem extends React.Component {
         const upArrow = (<Icon style={styles.indicatorIcon} name="arrow-up" size={30} color="white"/>);
         const downArrow = (<Icon style={styles.indicatorIcon} name="arrow-down" size={30} color="white" />);
         const openOrderIcon = (<Icon style={styles.indicatorIcon} name="minus" size={40} color="white" />);
-        // const evenIcon = (<View style={styles.evenIconContainer}>
-        //                     <Icon style={styles.evenIconChild} name="minus" size={40} color="white"/>
-        //                     <Icon style={styles.evenIconChild} name="minus" size={40} color="white"/>
-        //                     </View>);
+        const evenIcon = (<Icon style={[styles.indicatorIcon, styles.evenIcon]} name="controller-paus" size={30} color="white"/>);
         const rightArrow = (<Icon style={styles.rightArrow} name="chevron-small-right" size={20}/>);
-
-
-
 
         return (
             <View style={styles.listItem}>
 
                 <View style={styles.itemIndicatorContainer}>
                     <View style={[styles.indicator, styles.openTradeIndicator]}>
-                        {openOrderIcon}
+                        {evenIcon}
                     </View>
 
                 </View>
@@ -249,21 +243,37 @@ const styles = StyleSheet.create({
         color: '#03A9F4'
 
     },
-    //
+
     // evenIconContainer:{
     //
     //     display: 'flex',
     //     flexDirection: 'column',
     //     flexWrap: 'wrap',
     //     justifyContent: 'center',
-    //     alignItems: 'center'
+    //     alignItems: 'center',
+    //     alignContent: 'center',
+    //     backgroundColor: 'black',
+    //
     //
     // },
     //
     // evenIconChild:{
-    //     alignSelf: 'auto',
+    //     flex: 1,
+    //     alignSelf: 'center',
+    //     marginTop: 0,
+    //     marginBottom: 0,
+    //
     //
     // }
+
+    evenIcon: {
+        transform: [
+            {rotate: '90deg'},
+            {translateY: 1}, // Need to make responsive
+
+        ],
+    },
+
 
 
 

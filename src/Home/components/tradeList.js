@@ -23,7 +23,7 @@ export default class TradeList extends React.Component {
             <View style={styles.container}>
 
                 <SectionList
-                    // sections={[
+                    // sections={[a
                     //     {title: 'Open Trades', data: ['Hey Look']},
                     //     {title: 'Closed Trades', data: ['Alyssa', 'Brooke', 'Rachel', 'Margaret', 'Mia?', 'Some girl named Carley somewhere', 'Gabby Pinto',
                     //             'Morgan cant forget her too', 'Never Marta tho thats weird',

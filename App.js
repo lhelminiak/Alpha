@@ -4,7 +4,7 @@ import { StyleSheet, Platform, Image, Text, View, Button } from 'react-native';
 
 // Screens
 import HomeScreen from './src/Home/Home';
-import Details from './src/screens/details'
+import InputScreen from './src/Input/Input';
 
 // Packages
 import {TabNavigator} from 'react-navigation';
@@ -73,7 +73,7 @@ const MyApp = TabNavigator(
         },
 
         SecondScreen: {
-            screen: Details
+            screen: InputScreen
         },
 
     },

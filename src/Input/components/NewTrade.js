@@ -1,11 +1,9 @@
 import React from 'react';
 import { StyleSheet, Platform, Image, Text, View, Button } from 'react-native';
 
-import {DrawerNavigator} from 'react-navigation';
-
 import firebase from 'react-native-firebase';
 
-export default class Details extends React.Component {
+export default class NewTrade extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -20,11 +18,14 @@ export default class Details extends React.Component {
     render() {
         return (
             <View style={styles.container}>
+                <Text>NewTrade</Text>
 
-                <Text>Detail Screen</Text>
             </View>
         );
     }
+
+
+
 }
 
 const styles = StyleSheet.create({
@@ -36,3 +37,4 @@ const styles = StyleSheet.create({
     },
 
 });
+

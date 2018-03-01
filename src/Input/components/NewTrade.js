@@ -18,7 +18,7 @@ export default class NewTrade extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>NewTrade</Text>
+                <Text>New Trades</Text>
 
             </View>
         );

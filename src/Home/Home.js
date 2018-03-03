@@ -5,6 +5,10 @@ import { StyleSheet, Platform, Image, Text, View, Button } from 'react-native';
 // Screens
 import TradeList from './components/tradeList';
 
+
+// Components
+import Header from '../components/header';
+
 import {DrawerNavigator} from 'react-navigation';
 
 import firebase from 'react-native-firebase';
@@ -24,6 +28,7 @@ export default class HomeScreen extends React.Component {
     render() {
         return (
             <View style={styles.container}>
+                <Header/>
                 <TradeList/>
 
             </View>
@@ -36,10 +41,16 @@ export default class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        // flex: 1,
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        // backgroundColor: '#F5FCFF',
+
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'nowrap',
+        justifyContent: 'flex-start',
+        alignItems: 'stretch',
     },
 
 });

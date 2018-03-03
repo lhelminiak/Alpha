@@ -6,6 +6,9 @@ import { StyleSheet, Platform, Image, Text, View, Button } from 'react-native';
 import HomeScreen from './src/Home/Home';
 import InputScreen from './src/Input/Input';
 
+// Components
+import Header from './src/components/header';
+
 // Packages
 import {TabNavigator} from 'react-navigation';
 

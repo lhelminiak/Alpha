@@ -1,18 +1,12 @@
 import React from 'react';
 import { StyleSheet, Platform, Image, Text, View, Button } from 'react-native';
-
-
-// Screens
-import TradeList from './components/tradeList';
-
-// Components
-import Header from '../components/Header';
+import ListItem from '../Home/components/listItem';
 
 import {DrawerNavigator} from 'react-navigation';
 
 import firebase from 'react-native-firebase';
 
-export default class HomeScreen extends React.Component {
+export default class Details extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -28,67 +22,58 @@ export default class HomeScreen extends React.Component {
         return (
             <View style={styles.container}>
 
-                <View style={styles.headerContainer}>
-                    <Header/>
+
+                <View style={styles.menuButtonContainer}></View>
+                <View style={styles.headerTextContainer}></View>
+                <View style={styles.searchContainer}></View>
 
 
-                </View>
-
-
-                <View style={styles.overviewContainer}>
-
-                </View>
-
-                <View style={styles.listContainer}>
-
-
-                </View>
-
-
-
-                <TradeList/>
 
             </View>
         );
     }
-
-
-
 }
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
+        alignSelf: 'stretch',
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection:'row',
         justifyContent: 'flex-start',
         alignItems: 'stretch',
 
     },
 
-    headerContainer:{
-        marginTop: '5%',
+    menuButtonContainer:{
         flexGrow: 0,
         flexShrink: 0,
-        flexBasis: '7%',
+        flexBasis: '20%',
+        backgroundColor: 'blue',
+
+
+
 
 
     },
 
-    overviewContainer:{
+    headerTextContainer:{
         flex: 1,
+        backgroundColor: 'green',
 
 
+    },
+
+    searchContainer:{
+        flexGrow: 0,
+        flexShrink: 0,
+        flexBasis: '20%',
+        backgroundColor: 'blue',
 
 
     },
 
-    listContainer:{
-        flex: 1,
-        
 
-
-    },
 
 
 });
-

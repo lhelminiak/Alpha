@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Platform, Image, Text, View, Button } from 'react-native';
+import ListItem from '../Home/components/listItem';
 
 import {DrawerNavigator} from 'react-navigation';
 
@@ -21,7 +22,8 @@ export default class Details extends React.Component {
         return (
             <View style={styles.container}>
 
-                <Text>Detail Screen</Text>
+
+
             </View>
         );
     }
